@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+body{
+    background: rgb(0,85,0);
+    background: radial-gradient(circle, rgba(0,85,0,1) 0%, rgba(0,0,0,1) 100%);
+    background-attachment: fixed;
+}
+
+.searchbar{
+    position: relative;
+    background: linear-gradient(0deg, rgba(5,18,0,1) 0%, rgba(1,62,8,1) 100%);
+    top: 20px;
+    padding: 10px;
+    width: max-content;
+    display: flex;
+    gap: 5px;
+    border-radius: 50px;
+    margin: auto;
+    transition: all 0.2s ease;
+    box-shadow: 1px 5px 18px 11px rgba(0,0,0,0.75);
+    border: 1px solid black;
+}
+
+.search{
+    height: 50px;
+    width: 500px;
+    border-radius: 50px;
+    background-color: black;
+    background-color: rgb(53, 53, 53);
+    padding: 20px;
+    font-size: 25px;
+    border: none;
+}
+
+.search:focus{
+    background-color: white;
+}
+
+.searchbutton{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: rgb(53, 53, 53);
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.searchbutton:hover{
+    scale: 1.1;
+}
+
+.searchbutton.focus{
+    background-color: white;
+}
+
+.artistcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.artistcontainer.hide{
+    display: none;
+}
+
+.artistdiv{
+    position: relative;
+    top: 50px;
+    background-color: black;
+    width: max-content;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 1px 5px 18px 11px rgba(0,0,0,0.75);
+}
+
+.artistdiv:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 1px 5px 18px 11px rgba(167, 219, 178, 0.75);
+    scale: 1.1;
+}
+.artistdiv:hover .artistimage{
+    border-radius: 20px;
+    opacity: 1;
+    box-shadow: 1px 5px 18px 4px rgba(0,0,0,0.75);
+}
+
+.artistdiv:hover .name{
+    font-size: 50px;
+}
+
+.artistdiv:hover .name,
+.artistdiv:hover .followers,
+.artistdiv:hover .genres{
+    opacity: 1;
+}
+
+.artistdiv:hover .followersnumber{
+    font-size: 25px;
+}
+
+.artistimage{
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+.artistinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.name{
+    font-size: 40px;
+    font-weight: 600;
+    width: max-content;
+    border-radius: 5px;
+    opacity: 0.9;
+    transition: all 0.2s ease;
+}
+
+.genres{
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.followers{
+    opacity: 0.7;
+    font-weight: 600;
+}
+
+.followersnumber{
+    font-weight: 900;
+    color: green;
+    transition: all 0.2s ease;
+}
+
+.overviewpage{
+    position: relative;
+    margin: auto;
+    color: black;
+    background-color: black;
+    width: max-content;
+    top: 60px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 5px 18px 11px rgba(0,0,0,0.75);
+}
+
+.overviewpage.hide{
+    display: none;
+}
+
+.overviewphoto{
+    position: relative;
+    border-radius: 50px;
+    scale: 1;
+    transition: all 0.2s ease;
+}
+
+.overviewname{
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overviewfollowers{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.overviewfollowersnumber{
+    color: green;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.overviewtoptracksrelatedartists{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 18px 2px rgba(167, 219, 178, 0.75);
+    display: grid;
+}
+
+.overviewtitle{
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+
+.toptrackstitle,
+.relatedartiststitle{
+    font-size: 30px;
+    color: green;
+    font-weight: 700;
+    border-bottom: 4px solid green;
+    user-select: none;
+}
+
+.toptracksrelatedartists{
+    display: flex;
+    gap: 20px;
+}
+
+.toptracks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+.toptrack{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    
+    overflow: hidden;
+}
+
+.toptrackname{
+    position: relative;
+    width: max-content;
+    transition: left 0.1s linear;
+    left: 0px; 
+}
+
+.toptrackalbum{
+    position: relative;
+    font-size: 15px;
+    color: green;
+    white-space: nowrap;
+    top: -8px;
+}
+
+.relatedartists{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.relatedartist{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s ease;
+    border-radius: 20px;
+}
+
+.relatedartist:hover{
+    scale: 1.1;
+}
+
+.relatedartist:hover .relatedartistimage{
+    opacity: 1;
+    border-radius: 20px;
+    box-shadow: 1px 5px 18px 3px rgba(0,0,0,0.75);
+}
+
+.relatedartist:hover .relatedartistname{
+    font-weight: 600;
+}
+
+.relatedartistimage{
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.relatedartistname{
+    font-size: 20px;
+    
+}
+
+.overviewexit{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 20px;
+    top: 20px;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 4px solid white;
+    cursor: pointer;
+    line-height: 1px;
+    transition: all 0.2s ease;
+}
+
+.overviewexit:hover{
+    background-color: white;
+    color: green;
+    box-shadow: 1px 1px 18px 2px rgba(167, 219, 178, 0.75);
+}
+
+.svetijebem{
+    left: 100px;
+    width: 400px;
+    position: relative;
+    height: 50px;
+    border: 1px solid black;
+    background-color: white;
+    
+}
+
+.pesma{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    white-space: nowrap;
+}
