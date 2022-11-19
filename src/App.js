@@ -45,7 +45,8 @@ const App = () => {
       .then((resp) => resp.json())
       .then((data) => {
         setTopTracks(data.tracks.slice(0, 5));
-      });
+      })
+      .catch(err => alert(err));
     fetch(`https://api.spotify.com/v1/artists/${artist.id}/related-artists`, {
       headers: {
         "Accept": "application/json",
